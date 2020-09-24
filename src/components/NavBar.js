@@ -6,6 +6,8 @@ import {
   FormControl,
   Button
 } from "react-bootstrap";
+import Login from "./Login";
+import Registration from "./Registration";
 
 export default function NavBar() {
   return (
@@ -18,8 +20,12 @@ export default function NavBar() {
           <Nav.Link href="/shop" style={{color:"white"}}>Courses</Nav.Link>
           <Nav.Link href="/portfolio" style={{color:"white"}}>Developer's Portfolio</Nav.Link>
           <Nav.Link href="https://github.com/zahid-bracu" style={{color:"white"}}>Developer's Github</Nav.Link>
-          <Nav.Link href="/login" style={{color:"white"}}>Login</Nav.Link>
-          <Nav.Link href="/registration" style={{color:"white"}}>Registration</Nav.Link>
+          <Nav.Link style={{color:"white"}}>
+          <Login></Login>
+          </Nav.Link>
+          <Nav.Link   style={{color:"white"}}>
+            <Registration></Registration>
+          </Nav.Link>
           <Nav.Link href="/order" style={{color:"white"}}>Cart</Nav.Link>
         </Nav>
         <Form inline>

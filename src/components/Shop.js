@@ -7,9 +7,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cart from './Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../utilities/databaseManager';
 import Landing from "./Landing";
+import Category from "./Category";
 
 
 function Shop() {
+  
   /*
   declaring the cart variable as array to save & add product
   */
@@ -57,11 +59,23 @@ function Shop() {
     setCart(finalArr);
 },[])
 
+function onCategoryChange(Category){
+  if(Category=="All"){
+    var newArr=Datas;
+    setCourse(newArr);
+  }else{
+    console.log(Category);
+    var newArr=Datas.filter(pd=> pd.category==Category);
+    console.log(newArr);
+    setCourse(newArr);
+  }
+  
+}
 
-
-console.log(cart);
+ 
   return (
     <div className="">
+      <Category onCategoryChange={onCategoryChange} ></Category>
       <div className="row">
         <div className="col-lg-10 col-md-8 col-sm-6 col-6 main">
           <div className="row">

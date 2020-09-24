@@ -27,7 +27,7 @@ function App() {
   
   return (
     <div className="">
-      <NavBar></NavBar>
+      <NavBar ></NavBar>
       
       <Router>{/*Router Whole Wrapper*/}
         <Switch>{/*Switch for other page*/}
