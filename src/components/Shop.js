@@ -8,6 +8,7 @@ import Cart from './Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../utilities/databaseManager';
 import Landing from "./Landing";
 import Category from "./Category";
+import PopCart from './PopCart';
 
 
 function Shop() {
@@ -76,17 +77,18 @@ function onCategoryChange(Category){
   return (
     <div className="">
       <Category onCategoryChange={onCategoryChange} ></Category>
-      <div className="row">
-        <div className="col-lg-10 col-md-8 col-sm-6 col-6 main">
-          <div className="row">
+      <div className="row justify-content-center align-items-center">
+      <div  className="text-center col-lg-12 col-md-12 col-sm-12 col-12">
+              <PopCart cart={cart}></PopCart>
+          </div>
+        <div className="mx-auto  col-lg-12 col-md-2 col-sm-12 col-12 main">
+          <div className="row mx-auto">
             {
-              course.map((pd) => (<Display key={pd.key}  Datas={pd} addCart={addCart}></Display>))
+              course.map((pd) => (<Display className="mx-auto" key={pd.key}  Datas={pd} addCart={addCart}></Display>))
             }
             </div>
           </div>
-          <div className="col-lg-2 col-md-4 col-sm-6 col-6">
-              <Cart cart={cart}></Cart>
-          </div>
+          
       </div>
     </div>
   );

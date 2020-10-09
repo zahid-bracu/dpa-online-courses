@@ -67,15 +67,17 @@ const Order = () => {
     }else{
         return (
             <div className="row">
-                <div className="row col-lg-8 col-md-6 col-sm-6 col-6">
+                <div className="col-lg-2 offset-lg-2 col-md-3 col-sm-12 col-12">
+                    <FinalCart CheckOut={CheckOut} cart={cart}></FinalCart>
+                </div>
+                
+                <div className="row col-lg-8 col-md-9 col-sm-12 col-12">
                 {
                     
                     cart.map(pd=> <OrderDetails remove={remove} cart={pd}></OrderDetails>)
                 }
                 </div>
-                <div className="col-lg-2 offset-lg-2 col-md-6 col-sm-6 col-6">
-                    <FinalCart CheckOut={CheckOut} cart={cart}></FinalCart>
-                </div>
+                
             </div>
         );
     }

@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b55868db-a96e-4423-b5e8-5b5576ce2a73/deploy-status)](https://app.netlify.com/sites/dpa-online-courses/deploys)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -39,7 +39,6 @@ const FinalCart = (props) => {
                 <Link to="/order">
                 <Button onClick={()=>props.CheckOut()} variant="danger" size="sm">Check Out</Button>
                 </Link>
-                
             </Card.Body>
 
             <Card.Body id="msg" style={{display:"none"}}>

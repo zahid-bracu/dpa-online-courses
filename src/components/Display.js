@@ -30,7 +30,7 @@ export default function Display(props) {
   }
 
   return (
-      <Card className=" col-lg-6 col-md-6 col-sm-12 col-12 mx-4 my-3" style={{maxWidth: '18rem' }}>
+      <Card className="mx-auto col-lg-6 col-md-6 col-sm-12 col-12 my-2" style={{maxWidth: '18rem' }}>
         <Card.Img variant="top" src={img} />
           <Card.Body>
             

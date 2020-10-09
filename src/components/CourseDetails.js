@@ -15,7 +15,7 @@ const CourseDetails = () => {
                 <p className="text-justify">{data.details}</p>
                 <h3>Price: <span style={{color:"red"}}>{data.price}$</span> </h3>
                 <Link to="/shop">
-                    <button className="btn btn-dark">Go Back</button>
+                    <button className="btn btn-dark d-block mx-auto">Go Back</button>
                 </Link>
             </div>
         </div>

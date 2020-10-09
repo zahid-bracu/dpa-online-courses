@@ -8,6 +8,7 @@ import {
 } from "react-bootstrap";
 import Login from "./Login";
 import Registration from "./Registration";
+import PopCart from './PopCart';
 
 export default function NavBar() {
   return (
@@ -26,7 +27,7 @@ export default function NavBar() {
           <Nav.Link   style={{color:"white"}}>
             <Registration></Registration>
           </Nav.Link>
-          <Nav.Link href="/order" style={{color:"white"}}>Cart</Nav.Link>
+          <Nav.Link href="/order" style={{color:"white"}}> Cart </Nav.Link>
         </Nav>
         <Form inline>
           <FormControl type="text" placeholder="Search" className="mr-sm-2" />
