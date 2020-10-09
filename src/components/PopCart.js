@@ -4,6 +4,7 @@ import {
   Button,
   Modal
 } from "react-bootstrap";
+import './styles.css';
 
 import {
   BrowserRouter as Router,
@@ -52,12 +53,8 @@ function PopCart(props) {
         Click Here to See the Cart
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title className="text-center">Cart</Modal.Title>
-        </Modal.Header>
+      <Modal size="sm" show={show} className="box" onHide={handleClose}>
         <Modal.Body>
-        
           <Card  className="my-4" style={{position:'sticky',top:'0',width: 'auto',border:'none' }}>
               <Card.Body id="checking">
                   <Card.Title>Cart</Card.Title>
@@ -68,14 +65,11 @@ function PopCart(props) {
                   <Link to="/order">
                   <Button className="my-2"  variant="danger" size="sm">Review Product</Button>
                   </Link>
-                  
               </Card.Body>
-
               <Card.Body id="msg" style={{display:"none"}}>
                   <h3 className="text-center"></h3>
               </Card.Body>
           </Card>
-
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
