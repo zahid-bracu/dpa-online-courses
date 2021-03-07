@@ -10,4 +10,45 @@
   color:rgb(3, 93, 228);
 }
 
- 
+.form-custom-card{
+  width: 90%;
+  max-width: 400px;
+  margin: 5rem auto;
+}
+
+
+.btn-pay-custom{
+  display: block;
+  margin: 5px auto !important;
+  
+}
+
+
+.custom-form{
+  max-width: 500px;
+}
+
+.order-info{
+  width: 96%;
+  max-width: 500px;
+   
+  margin: 3em auto;
+  
+}
+
+.order-info>ul{
+  border: 1px solid rgb(182, 182, 182);
+  padding: 0.5em;
+  width: 100%;
+  max-width: 300px;
+}
+
+.info-list>li{
+  margin: .3em 0em;
+  font-weight: 600;
+}
+
+.link-nav-footer{
+  text-decoration: inherit !important;
+  color: black;
+}

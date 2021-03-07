@@ -3,9 +3,14 @@ import { addToDatabaseCart, getDatabaseCart, removeFromDatabaseCart, processOrde
 import Datas from "./Datas";
 import FinalCart from './FinalCart';
 import OrderDetails from './OrderDetails';
- 
+import {
+    BrowserRouter as Router,
+     
+    useHistory
+  } from "react-router-dom";
 
 const Order = () => {
+    let history = useHistory();
     const imgURL="https://i.ibb.co/s5Lwy8D/faraway-580.gif";
     const [flag,setFlag]=useState(false);
 
@@ -46,9 +51,8 @@ const Order = () => {
 
     function CheckOut(){
         console.log("Button Working")
-        setCart([]);
-        processOrder(cart);
-        setFlag(true);
+         
+
     }
 
 
@@ -59,8 +63,9 @@ const Order = () => {
     }else if(isEmpty(cart) && flag==true){
         return(
             <div >
-                <h2 style={{textAlign:"center",marginTop:"100px"}}>Checked Out Successfully</h2>
-                <img className="d-block mx-auto mt-5" style={{textAlign:"center"}} src={imgURL} />
+                <h2 style={{textAlign:"center",marginTop:"60px"}} className="text-danger">Congratulations !!!</h2>
+                <h3 style={{textAlign:"center"}}>Your Order Has Been Confirmed</h3>
+                <img className="d-block mx-auto mt-2" style={{textAlign:"center",width:"90%",maxWidth:"600px"}} src={imgURL} />
             </div>
             
         )

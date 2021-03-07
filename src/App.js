@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {createContext, useState } from "react";
 import "./styles.css";
 import Shop from './components/Shop'
 import NavBar from "./components/NavBar.js";
@@ -18,14 +18,32 @@ import {
 import Landing from "./components/Landing";
 import Home from "./components/Home";
 import CourseDetails from "./components/CourseDetails";
-
+import { PaymentCard } from "./components/PaymentCard";
+import ConfirmedOrder from "./components/ConfirmedOrder";
+import InformationForm from "./components/InformationForm";
+import ConfirmMsg from "./components/ConfirmMsg";
+import Footer from './components/Footer';
+export const UserInfoContext=React.createContext();
 
 function App() {
  
+  const [UserInfo, setUserInfo]=useState({
+    name:"",
+    business:"",
+    flat:"",
+    house:"",
+    road:"",
+    city:"",
+    phone:"",
+    card:"",
+    mail:"",
+    savedCart:""
+  });
 
 
   
   return (
+    <UserInfoContext.Provider value={[UserInfo, setUserInfo]}>
     <div className="">
       <NavBar ></NavBar>
       
@@ -44,6 +62,27 @@ function App() {
             <Home></Home>
           </Route>
 
+
+          <Route path='/paymentcard'>
+            <PaymentCard/>
+          </Route>
+
+
+          <Route path='/orderconfirm'>
+            <ConfirmedOrder/>
+          </Route>
+
+
+          <Route path='/confirmmsg'>
+              <ConfirmMsg/>
+          </Route>
+
+
+          <Route path='/informationform'>
+             <InformationForm/>
+          </Route>
+
+
           <Route path='/CourseDetails/:pd'> {/*The Path for dynamic Data key*/}
             <CourseDetails></CourseDetails> {/*Page for Dynamic Key Passing*/}
           </Route>
@@ -60,9 +99,11 @@ function App() {
             <Error></Error>{/*Wrong URL Page*/}
           </Route>
         </Switch>
+        <Footer/>
       </Router>
       
     </div>
+    </UserInfoContext.Provider>
   );
 }
 export default App;

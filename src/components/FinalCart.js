@@ -36,7 +36,7 @@ const FinalCart = (props) => {
                 <p>Courses Price: {total}$</p>
                 <p>Vat & Tax: 15%</p>
                 <p>Total Price: {mainprice}$ </p>
-                <Link to="/order">
+                <Link to="/informationform">
                 <Button onClick={()=>props.CheckOut()} variant="danger" size="sm">Check Out</Button>
                 </Link>
             </Card.Body>
